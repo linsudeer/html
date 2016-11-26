@@ -1,0 +1,96 @@
+<!-- 月度报表 -->
+<div>
+	<div class="text-center report-month-title">
+		<a href="javascript:void(0)"><img class="rotate-img" src="img/arrow.png" alt="指示箭头" ng-click="preMonth(curYear,curMonth)"></a>
+		<span class="font-blue">{{curYear}}年{{curMonth | formatMonth}}月</span>
+		<a href="javascript:void(0)"><img src="img/arrow.png" alt="指示箭头" ng-click="nextMonth(curYear,curMonth)"></a>
+	</div>
+	<!-- 贷前业务统计 -->
+	<table class="table report-month-table" cellpadding="0" cellspacing="0">
+		<caption class="subtitle">贷前业务统计</caption>
+		<thead>
+			<tr>
+				<td>指标</td>
+				<td>合计</td>
+				<td class="font-blue">贷款业务</td>
+				<td class="font-red">代理业务</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>新增调查</td>
+				<td>{{report.addPaperNum}}笔</td>
+				<td class="font-blue">{{report.addPaperSelfNum}}笔</td>
+				<td class="font-red">{{report.addPaperAgentNum}}笔</td>
+			</tr>
+			<tr>
+				<td>贷款发放</td>
+				<td>{{report.lendNum}}笔</td>
+				<td class="font-blue">{{report.lendSelfNum}}笔</td>
+				<td class="font-red">{{report.lendAgentNum}}笔</td>
+			</tr>
+			<tr>
+				<td>新增放款</td>
+				<td>{{report.lendMoney | formatMoney}}万</td>
+				<td class="font-blue">{{report.lendSelfMoney | formatMoney}}万</td>
+				<td class="font-red">{{report.lendAgentMoney | formatMoney}}万</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- 团队业绩排名 -->
+	<!-- <table class="table report-month-table" cellpadding="0" cellspacing="0">
+		<caption class="subtitle">团队业绩排名</caption>
+		<thead>
+			<tr>
+				<td>排名</td>
+				<td>团队</td>
+				<td class="font-blue">放款笔数</td>
+				<td class="font-red">放款金额</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>第一大团</td>
+				<td class="font-blue">6笔</td>
+				<td class="font-red">742万</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>第二大团</td>
+				<td class="font-blue">6笔</td>
+				<td class="font-red">738万</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>第三大团</td>
+				<td class="font-blue">6笔</td>
+				<td class="font-red">430万</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>第四大团</td>
+				<td class="font-blue">6笔</td>
+				<td class="font-red">430万</td>
+			</tr>
+		</tbody>
+	</table> -->
+	<!-- 贷款中业务统计 -->
+	<!-- <table class="table report-month-table" cellpadding="0" cellspacing="0">
+		<caption class="subtitle">贷款中业务统计</caption>
+		<thead>
+			<tr class="report-month-bus">
+				<td>回收贷款笔数</td>
+				<td>回收贷款总额</td>
+				<td>平局每笔回收金额</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1笔</td>
+				<td>0万元</td>
+				<td>0万元</td>
+			</tr>
+		</tbody>
+	</table> -->
+</div>

@@ -1,0 +1,67 @@
+<!-- 类别为个人类别 -->
+
+<!-- 客户类别 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">客户类别</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.cust_type_name}}</div>
+</div>
+<!-- 客户地区类型 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">客户地区类型</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.person_addr_type}}</div>
+</div>
+<!-- 客户姓名 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">客户姓名</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.person_name}}</div>
+</div>
+<!-- 性别 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">性别</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.person_sex}}</div>
+</div>
+<!-- 证件号码 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">证件号码</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.cret_code}}</div>
+</div>
+<!-- 出生日期 -->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">出生日期</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.brith_date | date:'yyyy年MM月dd日'}}</div>
+</div>
+<!-- 健康状况-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">健康状况</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.comp_effect}}</div>
+</div>
+<!-- 供养人数-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">供养人数</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">0</div>
+</div>
+<!-- 婚姻状况-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">婚姻状况</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.is_marit}}</div>
+</div>
+<!-- 移动电话号码-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">移动电话号码</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.clew_mob_tel}}</div>
+</div>
+<!-- 通讯地址-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">通讯地址</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.mess_addr}}</div>
+</div>
+<!-- 个人月均收入-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">个人月均收入</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{month_income | number:2}}元</div>
+</div>
+<!-- 家庭收入-->
+<div class="row todo-pre">
+	<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">家庭收入</div>
+	<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.total_income | number:2}}元</div>
+</div>

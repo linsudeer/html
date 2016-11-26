@@ -1,0 +1,83 @@
+<!-- 贷款签批 -->
+<div>
+<div ng-show="show" class="text-center todo-list-nodata">
+			<div>暂无历史审批记录</div>
+</div>
+	<table class="table todo-approve-record" cellpadding="0" cellspacing="0" ng-hide="show">
+		<caption class="caption">历史审批记录</caption>
+		
+		<tbody ng-repeat="d in data">
+			<tr>
+				<td rowspan="3" class="research">{{d.action_name}}</td>
+				<td>{{d.step_time | date:'yyyy/MM/dd'}}</td>
+				<td>{{d.step_emp_name}}</td>
+				<td>
+					<a class="font-red" href="javascript:void(0);">{{d.step_status}}</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">审核意见：{{d.step_note}}</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="attach" ng-click="toattach(d.proc_id)">
+					<div>
+						<a href="javascript:void(0);">查看附件</a>
+					</div>
+					<div class="text-right">
+						<img src="img/arrow.png" alt="指示箭头"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- 我的审批信息 -->
+	<table class="table todo-approve-record approve maigin-bottom" cellpadding="0" cellspacing="0">
+		<caption class="caption">我的审批信息</caption>
+		<tbody>
+			<tr>
+				<td class="research">所处流程</td>
+				<td colspan="2" ng-bind-html="data2.flow | trustHtml">
+					<!-- <strong>广聚兴流程（200万与以下）：</strong>
+				<span class="font-red">贷款调查(顺序)(1/1次)→</span> <strong class="font-purple">贷款签批(顺序)(0/1次)</strong>
+				-->
+			</td>
+		</tr>
+		<tr>
+			<td class="research">审批意见</td>
+			<td colspan="2">
+				<input type="text" ng-value="" class="form-control" ng-model="comment"></td>
+		</tr>
+		<tr ng-show="data2.hdnNextPro==0?false:true">
+			<td class="research">
+				<div>审批人</div>
+			</td>
+			<td colspan="2" class="attach">
+				<div>
+					<a href="javascript:void(0);">王森森</a>
+				</div>
+				<div class="text-right">
+					<img src="img/arrow.png" alt="指示箭头"></div>
+			</td>
+		</tr>
+		<tr>
+			<td class="research">上传附件</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div class="todo-upload-img">
+					<span class="imgview" id="imgview">
+					<span id="addbtn" ng-click="upload()">
+						<img class="img-responsive" alt="图片" src="img/psimg1.png"></span>
+					</span>
+					
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="todo-pre-btn">
+	<div class="col-xs-4 col-sm-4 todo-pre-pass" ng-click="pass()">通过</div>
+	<div class="col-xs-4 col-sm-4 todo-pre-refuse" ng-click="reject()">不通过</div>
+	<div class="col-xs-4 col-sm-4 todo-pre-return" ng-click="return()">退回</div>
+</div>
+</div>

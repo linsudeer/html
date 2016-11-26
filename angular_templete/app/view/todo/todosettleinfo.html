@@ -1,0 +1,29 @@
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无结算信息</div>
+</div>
+<div class="container-fluid todo-guar-con" ng-show="hide" ng-repeat="d in data">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">账户名称</div>
+		<div class="col-xs-8 col-sm-8">{{d.settle_account_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">开户行</div>
+		<div class="col-xs-8 col-sm-8">{{d.settle_bank_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">结算账号</div>
+		<div class="col-xs-8 col-sm-8">{{d.settle_account}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">币种</div>
+		<div class="col-xs-8 col-sm-8">{{d.curr_type_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">账号种类</div>
+		<div class="col-xs-8 col-sm-8">{{d.account_type_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">是否放款</div>
+		<div class="col-xs-8 col-sm-8">{{d.ifloanaccount}}</div>
+	</div>
+</div>

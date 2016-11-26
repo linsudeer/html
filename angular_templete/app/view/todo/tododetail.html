@@ -1,0 +1,115 @@
+<!-- 贷款预审 -->
+<div class="container-fluid todo-pre-con">
+	<!-- 客户经理 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">客户经理</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.emp_name}}</div>
+	</div>
+	<!-- 申请金额 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">申请金额</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">￥{{data.loan_apply_money}}元</div>
+	</div>
+	<!-- 贷款客户 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">贷款客户</div>
+		<div class="col-xs-6 col-sm-6 todo-pre-2"  ng-click="getPersonBeanInfo()">
+			<a href="javascript:void(0);">{{data.loan_cust_name}}</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3"  ng-click="getPersonBeanInfo()">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 贷款分类 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">贷款分类</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.loan_sort_name}}</div>
+	</div>
+	<!-- 担保方式 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">担保方式</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.loan_guar_form}}</div>
+	</div>
+	<!-- 贷款期限 -->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">贷款期限</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.loanTime}}</div>
+	</div>
+	<!-- 还款方式-->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">还款方式</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.collect_type_name}}</div>
+	</div>
+	<!-- 基准利率-->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">基准利率</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.loan_base_rate}}%&nbsp;&nbsp;月利率</div>
+	</div>
+	<!-- 正常利率浮动-->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">正常利率浮动</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.rate_float_level}}%</div>
+	</div>
+	<!-- 逾期利率浮动-->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">逾期利率浮动</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.overdue_float_level}}%</div>
+	</div>
+	<!-- 调查意见-->
+	<div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray todo-pre-suggest">调查意见</div>
+		<div class="col-xs-7 col-sm-7 todo-pre-2">{{data.appr_idea}}</div>
+	</div>
+
+	<!-- 担保资料 -->
+	<div class="row todo-pre" ng-click="toguarinfo()">
+		<div class="col-xs-4 col-sm-4 todo-pre-1">
+			<a ui-sref="todoguarinfo({loan_id:data.loan_id})">担保资料</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 还款计划 -->
+	<div class="row todo-pre" ng-click="tocollectplan()">
+		<div class="col-xs-4 col-sm-4 todo-pre-1">
+			<a href="javascript:void(0);">还款计划</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 关联账务 -->
+	<div class="row todo-pre" ng-click="toaccountlist()">
+		<div class="col-xs-4 col-sm-4 todo-pre-1">
+			<a href="javascript:void(0);">关联账务</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 影像资料 -->
+	<div class="row todo-pre maigin-bottom" ng-click="toimgpackage()">
+		<div class="col-xs-4 col-sm-4 font-blue todo-pre-1">
+			<a href="javascript:void(0);">影像资料</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 贷款审批用 TODO -->
+</div>
+<div ng-switch on="data.step_id">
+	<div ng-switch-when="-1">
+		<div class="todo-pre-btn">
+			<div class="col-xs-4 col-sm-4 todo-pre-pass" ng-click="pass()">通过</div>
+			<div class="col-xs-4 col-sm-4 todo-pre-refuse" ng-click="reject()">不通过</div>
+			<div class="col-xs-4 col-sm-4 todo-pre-return" ng-click="return()">退回</div>
+		</div>
+	</div>
+	<div ng-switch-default>
+		<div class="todo-pre-btn pass" ng-click="toApprove()">
+			<div class="col-xs-12 col-sm-12">贷款签批</div>
+		</div>
+	</div>
+</div>

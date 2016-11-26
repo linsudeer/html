@@ -1,0 +1,36 @@
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无还款计划</div>
+</div>
+<div ng-show="hide">
+	<table class="table todo-collectplan" cellpadding="0" cellspacing="0" ng-repeat="d in data">
+		<tr>
+			<td rowspan="7" class="collectplan-index">$index</td>
+			<td class="font-gray collectplan-label">计划还款时间</td>
+			<td>{{d.collect_date | date:'yyyy-MM-dd'}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还本金</td>
+			<td>{{d.dueto_corpus | number:2}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还利息</td>
+			<td>{{d.dueto_accr | number:2}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还管理费</td>
+			<td>{{d.manage_money | number:2}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还本息合计</td>
+			<td>{{d.paymnet_total | number:2}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还总额</td>
+			<td>{{d.manage_total_money | number:2}}</td>
+		</tr>
+		<tr>
+			<td class="font-gray">应还贷款余额</td>
+			<td>{{d.remain_money | number:2}}</td>
+		</tr>
+	</table>
+</div>

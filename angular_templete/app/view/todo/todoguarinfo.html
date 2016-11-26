@@ -1,0 +1,28 @@
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无担保详情</div>
+</div>
+<div class="container-fluid todo-guar-con" ng-show="hide" ng-repeat="d in data">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">合同编号</div>
+		<div class="col-xs-8 col-sm-8">{{d.hplGuarNum}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">最高保证额</div>
+		<div class="col-xs-8 col-sm-8">{{d.lblTopMoney}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">可提供担保总额</div>
+		<div class="col-xs-8 col-sm-8">{{d.lblCompMoney}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">保证合同方式</div>
+		<div class="col-xs-8 col-sm-8">{{d.lblNoCompMoney}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">合同类型</div>
+		<div class="col-xs-8 col-sm-8">{{d.lblGuarClassId}}</div>
+	</div>
+	<div class="row normal">
+		<div class="col-xs-12 xol-sm-12 text-center font-write">查看</div>
+	</div>
+</div>

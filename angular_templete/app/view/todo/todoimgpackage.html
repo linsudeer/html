@@ -1,0 +1,15 @@
+<!-- 影像资料 -->
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无影像资料</div>
+</div>
+<div ng-show="hide" class="container-fluid" todo-imgpack-con>
+	<!-- 借款合同 -->
+	<div class="row todo-imgpack" ng-repeat="d in data">
+		<div class="col-xs-4 col-sm-4 todo-pre-1 font-gray">{{d.package_name}}</div>
+		<div class="col-xs-6 col-sm-6 todo-pre-2" ng-click="todetail(d.package_id)">
+			<a href="javascript:void(0);">{{d.package_doc_count}}个</a>
+		</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3" ng-click="todetail(d.package_id)">
+			<img src="img/arrow.png" alt="指示箭头"></div>
+	</div>
+</div>

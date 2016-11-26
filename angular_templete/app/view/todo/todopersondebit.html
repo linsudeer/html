@@ -1,0 +1,41 @@
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无关联贷款</div>
+</div>
+<div class="container-fluid todo-guar-con" ng-show="hide" ng-repeat="d in data">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">贷款编号</div>
+		<div class="col-xs-8 col-sm-8">{{d.loan_no}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">客户姓名</div>
+		<div class="col-xs-8 col-sm-8">{{d.custName}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">贷款金额</div>
+		<div class="col-xs-8 col-sm-8">￥{{d.loan_money | number:2}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">计息方式</div>
+		<div class="col-xs-8 col-sm-8">{{d.calculat_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">还款方式</div>
+		<div class="col-xs-8 col-sm-8">{{d.collect_type_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">放款日</div>
+		<div class="col-xs-8 col-sm-8">{{d.sendDate | date:'yyyy年MM月dd日'}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">还款方式</div>
+		<div class="col-xs-8 col-sm-8">{{d.collect_type_name}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">结清方式</div>
+		<div class="col-xs-8 col-sm-8">{{d.payType}}</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 font-gray">展期还款日</div>
+		<div class="col-xs-8 col-sm-8">{{d.ConCollectDate | date:'yyyy年MM月dd日'}}</div>
+	</div>
+</div>

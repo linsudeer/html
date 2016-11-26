@@ -1,0 +1,330 @@
+/*解决windoosPhone8默认采用桌面浏览器方式呈现*/
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+/*
+	去除ios一些默认样式
+	-webkit-tap-highlight-color 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色
+	-webkit-appearance 改变按钮和其他控件的外观，使其类似于原生控件 none 去除系统默认appearance的样式,常用于IOS下移除原生样式
+	参考地址 ：http://www.css88.com/webkit/-webkit-appearance/
+*/
+-webkit-tap-highlight-color: transparent; -webkit-appearance: none;}
+/*font:inherit 设置所有元素的字体保持一致*/
+
+ul,ol{list-style:none;}
+a,a:hover,a:focus{
+	text-decoration:none;
+	color: #0099FF;
+}
+*{
+	margin:0;
+	padding:0;
+}
+body {
+    font: 14px "微软雅黑";
+    color: #333;
+    background: #f2f2f2 !important;
+}
+.pass{
+	background:#009900 !important;
+}
+.normal{
+	background: #0099FF !important;
+}
+.font-write{
+	color: #fff !important;
+}
+.font-blue{
+	color: #0099FF !important;
+}
+.font-gray{
+	color:#999999 !important;
+}
+.font-red{
+	color:#009900 !important;
+}
+.font-purple{
+	color:#0000FF !important;
+}
+/* .container-fluid {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row{
+	padding-right: -10px !important;
+  	padding-left: -10px !important;
+} */
+.caption {
+    padding:10px 10px;
+    color: #333;
+    text-align: left;
+}
+table,tbody,tr,td{
+	border: 1px #cccccc solid;
+}
+.table{
+	margin-bottom: 0;
+}
+.table > tbody + tbody{
+	border-top: 1px solid #cccccc;
+}
+.rotate-img{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 
+}
+.maigin-bottom{
+	margin-bottom: 5rem;
+}
+
+.ui_text {
+    height: auto;
+    padding: 4px;
+    background: #fff;
+    border: solid 1px #BCBCBC;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #4B6C1E;
+}
+.ui_prompt .ui_notice{
+    border: solid 1px #F5F5F5;
+    border-top: solid 1px #F1F1F1;
+    border-left: solid 1px #F1F1F1;
+    background-color: #fff !important;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px #FFF;
+}
+.ui_notice .ui_msg {
+    background: #000;
+    color:#FFF;
+    opacity:0.7;
+    border-radius: 3px;
+
+}
+/*-------------------------------------------我的代办---------------------------------------------*/
+.todo-list-nodata{
+	padding-top: 3rem;
+	line-height: 3rem;
+}
+.todo-con{
+	background: #fff;
+}
+.todo-list{
+	padding: 10px;
+	margin-left: -15px;
+	margin-right: -15px;
+	border-bottom: 1px #CCCCCC solid;
+}
+.todo-item-1{
+	width:4rem;
+	height:4rem;
+	background: #FF9933;
+	padding:0;
+	color:#fff;
+	padding-top: 2px;
+}
+
+.todo-item-1 div{
+	font-size: 1.3rem;
+}
+.todo-item-2{
+	height:4rem;
+	padding-top:0.3rem;
+	font-size: 1.3rem;
+}
+.todo-item-3{
+	height: 4rem;
+	padding-top:1rem;
+}
+.todo-item-3 img{
+	width:1rem;
+}
+/*-------------------------------------------贷款预审---------------------------------------------*/
+.todo-pre-con{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.todo-pre{
+	background: #fff;
+	padding:10px 10px;
+	border-bottom: 1px #CCCCCC solid;
+}
+.todo-pre div{
+	padding:0;
+}
+.todo-pre-1{
+	
+}
+.todo-pre-2{
+
+}
+.todo-pre-3 img{
+	width:1rem;
+}
+.todo-pre-suggest{
+	margin:auto 0;
+}
+.todo-pre-btn{
+	color: #fff;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	margin-top: 5rem;
+}
+.todo-pre-btn div{
+	padding:10px;
+	text-align: center;
+	display: inline-block;
+}
+.todo-pre-pass{
+	background: #009900;
+}
+.todo-pre-refuse{
+	background: #cc3333;
+	border-left: 1px #fff solid;
+	border-right: 1px #fff solid;
+}
+.todo-pre-return{
+	background: #cc3333;
+}
+
+/*-------------------------------------------贷款签批---------------------------------------------*/
+.todo-approve{
+	padding:10px 10px;
+}
+.todo-approve-record tbody{
+	background: #fff
+}
+.todo-approve-record .research{
+	width:25%;
+	vertical-align: middle;
+	text-align: right;
+}
+.todo-approve-record .attach div{
+	width:49%;
+	display: inline-block;
+}
+.todo-approve-record .attach img{
+	width:1rem;
+}
+.approve td{
+	border: none;
+}
+/*上传图片*/
+.todo-upload-img .imgdiv{
+	position:relative;
+	
+}
+.todo-upload-img img{
+	width: 5rem;
+	height:5rem;
+}
+.todo-upload-img span{
+	display: inline-block;
+}
+.todo-upload-img .imgdiv {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.todo-upload-img .imgview .signsub{
+	position:absolute;
+	right:0;
+	top:-6px;
+	width:1rem;
+	height:1rem;
+}
+/* .todo-upload-img span {
+	padding: 0 0.4rem;
+} */
+/*-------------------------------------------月度报表---------------------------------------------*/
+.report-month-title{
+	padding:10px 0;
+	background: #fff;
+	border-bottom: 1px #cccccc solid;
+}
+
+.report-month-title img{
+	width:1rem;
+}
+.report-month-title span{
+	padding:0 1rem;
+	vertical-align: middle
+}
+
+.report-month-table{
+	background: #fff;
+		text-align: center;
+}
+
+.report-month-table .subtitle{
+	padding:10px 10px;
+    color: #333;
+    background: #fff;
+	text-align: center;
+}
+
+.report-month-table thead{
+	background: #F2F2F2;
+}
+.report-month-bus td{
+	padding-right: 0 ! important ;
+	padding-left: 0 ! important ;
+}
+/*-------------------------------------------担保资料---------------------------------------------*/
+.todo-guar-con{
+	background: #fff;
+}
+.todo-guar-con>div{
+	border-bottom: 1px #cccccc solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*-------------------------------------------还款计划 关联账务---------------------------------------------*/
+.todo-collectplan{
+	background: #fff;
+	margin-bottom: 1rem;
+}
+.todo-collectplan tr td{
+	border: none;
+}
+.collectplan-label{
+	width:30%;
+}
+.collectplan-index{
+	vertical-align: middle !important;
+	text-align: center;
+	width: 13%;
+	border-right:1px #cccccc solid !important;
+}
+/*-------------------------------------------影像资料---------------------------------------------*/
+.todo-imgpack-con{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.todo-imgpack{
+	background: #fff;
+	padding:10px 10px;
+	border-bottom: 1px #CCCCCC solid;
+}
+.todo-imginfo-title{
+	padding:10px 15px;
+	border-bottom: 1px #cccccc solid;
+	border-top: 1px #cccccc solid;
+}
+.todo-imginfo-pic{
+	background: #fff;
+	text-align: center;
+	padding:1rem 1rem;
+	font-size: 12px;
+}
+.todo-imginfo-pic img{
+	max-width: 100%;
+	height: auto;
+}

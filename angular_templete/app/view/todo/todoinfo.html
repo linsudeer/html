@@ -1,0 +1,33 @@
+<!-- 基本信息 -->
+<div class="container-fluid todo-pre-con">
+	<div ng-include="custClass==0?'view/todo/todopersoninfo.html':'view/todo/todocropinfo.html'"></div>
+	<!-- 结算信息 -->
+	<div class="row todo-pre" ng-click="toSettleInfo()">
+		<div class="col-xs-4 col-sm-4 font-blue todo-pre-1">结算信息</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 影像资料 -->
+	<div class="row todo-pre" ng-click="toimgpackage()">
+		<div class="col-xs-4 col-sm-4 font-blue todo-pre-1">影像资料</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 关联贷款 -->
+	<div class="row todo-pre" ng-click="toPersonDebitList()">
+		<div class="col-xs-4 col-sm-4 font-blue todo-pre-1">关联贷款</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div>
+	<!-- 管理担保 -->
+	<!-- <div class="row todo-pre">
+		<div class="col-xs-4 col-sm-4 font-blue todo-pre-1">管理担保</div>
+		<div class="col-xs-1 col-sm-1 text-center pull-right todo-pre-3">
+			<img src="img/arrow.png" alt="指示箭头">
+		</div>
+	</div> -->
+</div>
+

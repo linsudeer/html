@@ -1,0 +1,19 @@
+<!-- 代办列表 -->
+<div ng-hide="hide" class="text-center todo-list-nodata">
+	<div>暂无待办事项</div>
+</div>
+<div class="container-fluid todo-con" ng-show="hide">
+	<div class="row todo-list" ng-repeat="l in list | orderBy:'loan_apply_date'" ng-click="toDetail(l.loan_id)">
+		<div class="col-xs-2 col-sm-2 text-center todo-item-1" ng-class="{normal:{{l.step_id==-1?true:false}}}">
+			<div>{{l.step_id==-1?'预审':'审批'}}</div>
+			<div>{{l.loan_apply_date | date:'MM-dd'}}</div>
+		</div>
+		<div class="col-xs-9 col-sm-9 todo-item-2">
+			<strong>{{l.emp_name}}的客户借款{{l.loan_apply_money}}</strong>
+			<div>{{l.appr_idea}}</div>
+		</div>
+		<div class="col-xs-1 col-sm-1 todo-item-3 pull-right">
+			<a ui-sref="tododetail({loan_id:l.loan_id})"><img src="img/arrow.png" alt="指示箭头"></a>
+		</div>
+	</div>
+</div>
